@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             redLightView.alpha = 1
             currentTrafficLightStatus = .red
             trafficLightButton.setTitle("NEXT", for: .normal)
-        case .green:
+        case .red:
             redLightView.alpha = 0.3
             yellowLightView.alpha = 1
             currentTrafficLightStatus = .yellow
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
             yellowLightView.alpha = 0.3
             greenLightView.alpha = 1
             currentTrafficLightStatus = .green
-        case .red:
+        case .green:
             greenLightView.alpha = 0.3
             redLightView.alpha = 1
             currentTrafficLightStatus = .red
