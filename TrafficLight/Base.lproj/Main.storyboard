@@ -21,7 +21,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-BU-HYc">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="ZDq-Ze-Jna"/>
                                             <constraint firstAttribute="width" constant="128" id="pRU-At-hDk"/>
@@ -37,7 +37,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRq-cr-hvX">
                                         <rect key="frame" x="0.0" y="296" width="128" height="128"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="772-b1-0S7"/>
                                             <constraint firstAttribute="width" constant="128" id="eqc-Nz-wlw"/>
@@ -69,8 +69,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenLightView" destination="0y5-BU-HYc" id="HLA-Ve-ksq"/>
-                        <outlet property="redLightView" destination="lRq-cr-hvX" id="vrh-SS-J2n"/>
+                        <outlet property="greenLightView" destination="lRq-cr-hvX" id="vrh-SS-J2n"/>
+                        <outlet property="redLightView" destination="0y5-BU-HYc" id="HLA-Ve-ksq"/>
                         <outlet property="trafficLightButton" destination="cNt-A5-IbD" id="mR0-et-g44"/>
                         <outlet property="yellowLightView" destination="3Yq-Ka-XFR" id="8b8-eE-tzv"/>
                     </connections>

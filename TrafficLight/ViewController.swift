@@ -8,22 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var greenLightView: UIView!
-    @IBOutlet var yellowLightView: UIView!
     @IBOutlet var redLightView: UIView!
+    @IBOutlet var yellowLightView: UIView!
+    @IBOutlet var greenLightView: UIView!
     @IBOutlet var trafficLightButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greenLightView.layer.cornerRadius = 64
-        yellowLightView.layer.cornerRadius = 64
         redLightView.layer.cornerRadius = 64
+        yellowLightView.layer.cornerRadius = 64
+        greenLightView.layer.cornerRadius = 64
         
         trafficLightButton.layer.cornerRadius = 10
         
-        greenLightView.alpha = 0.3
-        yellowLightView.alpha = 0.3
         redLightView.alpha = 0.3
+        yellowLightView.alpha = 0.3
+        greenLightView.alpha = 0.3
     }
     
     enum TrafficLightStatus {
@@ -35,21 +35,21 @@ class ViewController: UIViewController {
     @IBAction func trafficLightButtonDidTapped(_ sender: UIButton) {
         switch currentTrafficLightStatus {
         case .off:
-            greenLightView.alpha = 1
-            currentTrafficLightStatus = .green
+            redLightView.alpha = 1
+            currentTrafficLightStatus = .red
             trafficLightButton.setTitle("NEXT", for: .normal)
         case .green:
-            greenLightView.alpha = 0.3
+            redLightView.alpha = 0.3
             yellowLightView.alpha = 1
             currentTrafficLightStatus = .yellow
         case .yellow:
             yellowLightView.alpha = 0.3
-            redLightView.alpha = 1
-            currentTrafficLightStatus = .red
-        case .red:
-            redLightView.alpha = 0.3
             greenLightView.alpha = 1
             currentTrafficLightStatus = .green
+        case .red:
+            greenLightView.alpha = 0.3
+            redLightView.alpha = 1
+            currentTrafficLightStatus = .red
         }
     }
 }
